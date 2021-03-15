@@ -1,6 +1,6 @@
 import { getToken } from './tokenService';
 
-const BASE_URL = 'https://git.heroku.com/react-app-mastermind.git';
+const BASE_URL = 'https://react-app-mastermind.herokuapp.com/api/scores';
 
 
 export function fetchScoreData() {
