@@ -28,17 +28,3 @@ Features:
 ## View Site: [React MasterMind](https://free-real-estate.netlify.app/) 🌐
 
 ## View Back-End Code: https://github.com/imckain/react-mastermind-backend
-
----
-
-## Screenshots 📸
-
-![Image](https://i.imgur.com/7o9gifP.png)
-
-![Image](https://i.imgur.com/y9Asetx.jpg)
-
-![Image](https://i.imgur.com/arEVxhM.png)
-
-![Image](https://i.imgur.com/G0CdxOQ.jpg)
-
-
