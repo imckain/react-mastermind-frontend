@@ -98,83 +98,47 @@ function App(props) {
     }
 
     function handleScoreClick() {
-      // make copy of gameState
       const gameStateCopy = {...gameState};
-
-      // get current guess index - (shortcut variable)
       const currentGuessIdx = gameStateCopy.guesses.length - 1; 
-
-      // make a reference to current guess in the gameState copy - (shortcut variable)
       const currentGuess = gameState.guesses[currentGuessIdx];
-
-      // make a reference to all guesses in gameState copy
       const guessesCopy = gameState.guesses;
-  
-      /* 
-        create "working" copies of the "guessed" code and the secret
-        code so that we can modify them as we compute the number of
-        perfect and almost without messing up the actual ones in our state copy
-      */ 
 
       const guessCodeCopy = [...currentGuess.code];
       const secretCodeCopy = [...gameStateCopy.code];
   
       let perfect = 0, almost = 0;
   
-      // first pass computes number of "perfect"
       guessCodeCopy.forEach((code, idx) => {
         if (secretCodeCopy[idx] === code) {
           perfect++;
-          /*
-           ensure same choice is not matched again
-           by updating both elements in the "working"
-           arrays to null
-          */ 
           guessCodeCopy[idx] = secretCodeCopy[idx] = null;
         }
       });
-  
-      // second pass computes number of "almost"
       guessCodeCopy.forEach((code, idx) => {
         if (code === null) return;
         let foundIdx = secretCodeCopy.indexOf(code);
         if (foundIdx > -1) {
           almost++;
-          // again, ensure same choice is not matched again
           secretCodeCopy[foundIdx] = null;
         }
       });
-  
-      // update the current guess score using the reference we created above
+
       currentGuess.score.perfect = perfect;
       currentGuess.score.almost = almost;
   
   
       if (perfect === 4) {
-        // Chicken dinner! 
-
-        // grab elapsed time
         const elapsedTime = gameState.elapsedTime;
-
-        //need to stop the timer!
         gameStateCopy.isTiming = false;
 
-          /*
-            first to see if there are less that 20 high scores then check where the current 
-            stands comparing the amount of attemps and time elapsed
-          */
           if ((scores.length < 20 || isHighScore(guessesCopy, elapsedTime))) {
             const initials = prompt('Congrats you have a top-20 score! Enter your initials: ').substr(0, 3);
-            
             createScore({ initials, numGuesses: guessesCopy.length, seconds: elapsedTime });
             props.history.push('/high-scores');
           }        
-      
       } else {
         gameStateCopy.guesses.push(getNewGuess());
       }
-  
-      // finally, update the state to the updated version
       setGameState(gameStateCopy);
     }
 

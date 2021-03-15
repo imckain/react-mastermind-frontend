@@ -14,7 +14,6 @@ function SignupForm (props) {
   function handleChange(e) {
     props.updateMessage('');
     setFormState(prevState => ({
-      // Using ES2015 Computed Property Names
       ...prevState,
       [e.target.name]: e.target.value
     }));
@@ -25,10 +24,8 @@ function SignupForm (props) {
     try {
       await signup(formState);
       props.handleSignupOrLogin();
-      // Successfully signed up - show GamePage
       props.history.push('/');
     } catch (err) {
-      // Invalid user data (probably duplicate email)
       props.updateMessage(err.message);
     }
   }
