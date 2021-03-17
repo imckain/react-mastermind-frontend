@@ -1,4 +1,4 @@
-# Project 3: React MasterMind
+# React MasterMind
 ---
 
 The classic MasterMind game built in React!
@@ -13,7 +13,6 @@ Features:
 
 ## Technologies Used 💻
 
-
 - <img src="public/images/react.png" width="27"> React
 - <img src="public/images/mongo_db.png" width="27"> MongoDB & Mongoose
 - <img src="public/images/html5.png" width="27"> HTML 5 & CSS
@@ -25,6 +24,6 @@ Features:
 
 ---
 
-## View Site: [React MasterMind](https://free-real-estate.netlify.app/) 🌐
+## View Site: [React MasterMind](https://react-app-mastermind.netlify.app/) 🌐
 
 ## View Back-End Code: https://github.com/imckain/react-mastermind-backend
