@@ -1,4 +1,8 @@
 # React MasterMind
+
+## View Site: [React MasterMind](https://react-app-mastermind.netlify.app/) 🌐
+
+## View Back-End Code: https://github.com/imckain/react-mastermind-backend
 ---
 
 The classic MasterMind game built in React!
@@ -24,6 +28,18 @@ Features:
 
 ---
 
-## View Site: [React MasterMind](https://react-app-mastermind.netlify.app/) 🌐
+## How To Play: 
 
-## View Back-End Code: https://github.com/imckain/react-mastermind-backend
+### Object of the Game
+To outsmart the computer with a clever code or great guesswork.
+
+### Game Play
+- The code can be made up of any combination of the colored pegs.
+- Try to duplicate the exact colors and positions of the hidden Code pegs.
+- Each guess is made by placing a row of colored pegs.
+- The box to the right of each guess will use the white pegs, which indicate each peg that is a correct color but wrong position.
+- A black peg to indicate each peg is in a correct position and a right color. 
+- If neither are true, then the peg spot will be grey. 
+- The pegs will be placed in any order in the peg spots arranged in the square pattern next to the guess line.
+- Once the code is guessed, the timer will stop and, if logged in, your highscore will be registered.
+- Have Fun & Thanks for Playing!
