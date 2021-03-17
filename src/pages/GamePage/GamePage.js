@@ -3,6 +3,7 @@ import ColorPicker from '../../components/ColorPicker/ColorPicker';
 import GameTimer from '../../components/GameTimer/GameTimer';
 import NewGameButton from '../../components/NewGameButton/NewGameButton';
 import NavBar from '../../components/NavBar/NavBar';
+import HowTo from '../../components/HowTo/HowTo';
 import { getUser } from '../../services/userService';
 
 import { Link } from 'react-router-dom';
@@ -50,6 +51,7 @@ const GamePage = (props) => {
           </div>
         </div>
         <footer className="header-footer">{props.winTries ? `You Won in ${props.winTries} Guesses!` : 'Good Luck!'}</footer>
+        <HowTo />
       </div>
     );
 };
