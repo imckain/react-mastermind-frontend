@@ -1,21 +1,21 @@
 # React MasterMind
 
-## View Site: [React MasterMind](https://react-app-mastermind.netlify.app/) 🌐
+## 🌐 View Site: [React Mastermind](https://react-app-mastermind.netlify.app/) 
 
 ## View Back-End Code: https://github.com/imckain/react-mastermind-backend
 ---
 
-The classic MasterMind game built in React!
+The classic Mastermind game built in React!
 
 Features:
 - Oauth2 Login and Signup
 - Play the game with 3 difficulties
 - Users can see their highscores
-- Users can see try and beat their times
+- Users can try and beat their times
 
 ---
 
-## Technologies Used 💻
+## 💻 Technologies Used 
 
 - <img src="public/images/react.png" width="27"> React
 - <img src="public/images/mongo_db.png" width="27"> MongoDB & Mongoose
@@ -24,7 +24,7 @@ Features:
 - <img src="public/images/nodejs.png" width="27"> NodeJS
 - <img src="public/images/heroku.png" width="27"> Heroku
 - <img src="public/images/netlify.png" width="27"> Netlify
-- 🔐 OAuth2
+- 🔐&nbsp; OAuth2
 
 ---
 
